@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeautyTime 💅</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>💅 BeautyTime</h1>
+    <p>Agende seu horário e realce sua beleza!</p>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Agendamento</h2>
+      <form id="formAgendamento">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Seu nome" required>
+
+        <label for="servico">Serviço:</label>
+        <select id="servico" required>
+          <option value="">Selecione...</option>
+          <option value="Corte de cabelo">Corte de cabelo</option>
+          <option value="Manicure">Manicure</option>
+          <option value="Pedicure">Pedicure</option>
+          <option value="Sobrancelha">Sobrancelha</option>
+          <option value="Extensão de cílios">Extensão de cílios</option>
+        </select>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" required>
+
+        <label for="horario">Horário:</label>
+        <input type="time" id="horario" required>
+
+        <button type="button" id="btnSalvar">Agendar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 BeautyTime - Seu momento de beleza 💖</p>
+  </footer>
+
+  <!-- ✅ A ordem correta é importante -->
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

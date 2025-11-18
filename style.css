@@ -1,0 +1,111 @@
+:root {
+  --rosa-claro: #ffb6c1;
+  --rosa-forte: #ff69b4;
+  --rosa-escuro: #ff1493;
+  --branco: #fff;
+  --preto: #333;
+  --dourado: #D4AF37;
+}
+
+/* CABEÇALHO */
+header {
+  background: linear-gradient(90deg, var(--rosa-claro), var(--dourado));
+  padding: 10px 0; /* 🔸 antes era 20px */
+  color: var(--branco);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+header h1 {
+  color: var(--branco);
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.8), 0 0 12px rgba(255, 215, 0, 0.5);
+  font-weight: 700;
+}
+
+
+/* CONTEÚDO CENTRAL */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 130px); /* deixa espaço entre topo e rodapé */
+  background: linear-gradient(180deg, #fff8fb, #ffe6f2);
+  position: relative;
+  overflow: hidden;
+  padding: 40px 0; /* garante respiro visual */
+}
+
+
+/* FORMULÁRIO */
+.form-section {
+  background: var(--branco);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid var(--dourado);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  position: relative;
+  z-index: 1;
+}
+
+input, select, button {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* BOTÕES */
+button {
+  background-color: var(--rosa-forte);
+  border: 2px solid var(--dourado);
+  color: var(--branco);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--dourado);
+  color: var(--preto);
+  transform: scale(1.05);
+}
+
+/* RODAPÉ */
+footer {
+  background: linear-gradient(90deg, var(--rosa-claro), var(--dourado));
+  color: var(--branco);
+  padding: 5px 0; /* Menor mesmo */
+  width: 100%;
+  bottom: 0;
+  border-top: 2px solid var(--dourado);
+  text-align: center;
+  position: relative; /* não fica colado na tela */
+}
+
+/* FLORES NAS LATERAIS */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 220px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.2; /* Transparência sutil */
+  z-index: 0;
+}
+
+body::before {
+  left: 0;
+  background-image: url('https://i.imgur.com/jZ5wN6V.png'); /* 🌸 flor rosê */
+}
+
+body::after {
+  right: 0;
+  background-image: url('https://i.imgur.com/jZ5wN6V.png');
+  transform: scaleX(-1);
+}
