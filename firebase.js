@@ -1,10 +1,13 @@
-// Importa o Firebase direto da CDN oficial
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-// ⚙️ Configuração do seu projeto (essa parte vem do painel do Firebase)
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: import.meta.env.vite_firebase_aoi_key
+  apiKey: "import.meta.env.vite_firebase_aoi_key",
   authDomain: "beautytime-9c25c.firebaseapp.com",
   databaseURL: "https://beautytime-9c25c-default-rtdb.firebaseio.com",
   projectId: "beautytime-9c25c",
@@ -14,8 +17,9 @@ const firebaseConfig = {
   measurementId: "G-K36QY48FF2"
 };
 
-// Inicializa o app Firebase
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
-// Exporta o banco Firestore
-export const db = getFirestore(app);
+
+export { db };
