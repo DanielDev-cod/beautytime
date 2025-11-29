@@ -4,7 +4,7 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/11.0.1/firebase
 
 // ⚙️ Configuração do seu projeto (essa parte vem do painel do Firebase)
 const firebaseConfig = {
-  apiKey: "AIzaSyA1ra6VSKoz7VKDm3QfJ2kSs72oUDa58B0",
+  apiKey: import.meta.env.vite_firebase_aoi_key
   authDomain: "beautytime-9c25c.firebaseapp.com",
   databaseURL: "https://beautytime-9c25c-default-rtdb.firebaseio.com",
   projectId: "beautytime-9c25c",
