@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BeautyTime 💅</title>
   <link rel="stylesheet" href="style.css">
- <link rel="icon" href="data:,">
 </head>
 <body>
+
   <header>
     <h1>💅 BeautyTime</h1>
     <p>Agende seu horário e realce sua beleza!</p>
@@ -16,6 +16,7 @@
   <main>
     <section class="form-section">
       <h2>Agendamento</h2>
+
       <form id="formAgendamento">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" placeholder="Seu nome" required>
@@ -38,35 +39,41 @@
 
         <button type="button" id="btnSalvar">Agendar</button>
       </form>
+
     </section>
   </main>
 
   <footer>
     <p>© 2025 BeautyTime - Seu momento de beleza 💖</p>
   </footer>
-<!-- FIREBASE CDN (APENAS 1 DECLARAÇÃO DO DB!) -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyA1ra6VSKoz7VKDm3QfJ2kSs72oUDa58B0",
-    authDomain: "beautytime-9c25c.firebaseapp.com",
-    databaseURL: "https://beautytime-9c25c-default-rtdb.firebaseio.com",
-    projectId: "beautytime-9c25c",
-    storageBucket: "beautytime-9c25c.appspot.com",
-    messagingSenderId: "544745201727",
-    appId: "1:544745201727:web:5a6870c8fbafd88b9bd88a"
-  };
 
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-  window.db = db;
+  
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-  console.log("🔥 Firebase iniciado com sucesso!");
-</script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyA1ra6VSKoz7VKDm3QfJ2kSs72oUDa58B0",
+      authDomain: "beautytime-9c25c.firebaseapp.com",
+      databaseURL: "https://beautytime-9c25c-default-rtdb.firebaseio.com",
+      projectId: "beautytime-9c25c",
+      storageBucket: "beautytime-9c25c.appspot.com",
+      messagingSenderId: "544745201727",
+      appId: "1:544745201727:web:5a6870c8fbafd88b9bd88a"
+    };
 
-<script type="module" src="firebase.js"></script>
-<script type="module" src="script.js"></script>
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    
+    window.db = db;
+
+    console.log("🔥 Firebase iniciado com sucesso!");
+  </script>
+
+ 
+  <script type="module" src="script.js"></script>
 
 </body>
+</html>
